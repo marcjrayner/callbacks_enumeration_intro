@@ -37,7 +37,15 @@ Cinema.prototype.checkAllFilmsOver = function (length) {
   return result
 };
 
-
+Cinema.prototype.calculateTotalRunTime = function () {
+  const lengths = this.films.map( (film) => {
+    return film.length
+  });
+  const result = lengths.reduce( (runningTotal, length) => {
+    return runningTotal + length;
+  });
+  return result;
+};
 
 
 module.exports = Cinema;
