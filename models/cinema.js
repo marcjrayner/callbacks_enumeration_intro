@@ -30,6 +30,13 @@ Cinema.prototype.checkIfFilmsFrom = function (year) {
   return result
 };
 
+Cinema.prototype.checkAllFilmsOver = function (length) {
+  const result = this.films.some( (film) => {
+    return film.length > length;
+  });
+  return result
+};
+
 
 
 
